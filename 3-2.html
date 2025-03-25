@@ -1,38 +1,83 @@
-* { box-sizing: border-box; }
-body{margin: 0;
-font-family:Helvetica,Arial,sans-serif;
-font-size:  14px;
-line-height: 1.5;
-letter-spacing: 0.5px;
+<html>
+<head>
+  <title> Pertemuan 3 Styling dengan CSS </title>
+<style>
+section{border:1px solid red;   padding: 8px; }
+input{
+  padding: 5px 2px 0px 1px;
+  
+  
+  width:80%;
+  background:purple;
+}  
+#username{ background:green;}
+.bg-grey{ background:grey;}
+  
+@media screen and (max-width: 700px) {
+[class*='col-'] { width: 50%; }
 }
-
-input,
-select
-{
-width: 100%;
-padding:8px; margin:5px 0;
-border: 1px solid grey;
-border-radius:5px;
-display: block;
+@media screen and (max-width: 450px) {
+[class*='col-'] { width: 100%; }
 }
+</style>
+  
 
-button,
-input[type=submit],
-input[type=button]
-{
-color:white; background:skyblue;
-border: 1px solid transparent;
-cursor:pointer;
-align-items: center;
-}
+</head>
+  <body>
+<header><a href="ipwija.ac.id"> Home </a></header>
+<main> hi 
+<br/> 
+</main id="main" class="main">    
+<section>Halo Word</section>
 
-button:hover,input[type=submit]:hover,input[type=button]:hover{background:aqua; }
+    <section id="gambar">
+    <img src="edu.png" height="200" width="200">  
+    </section>
 
-ul {margin: 0; padding: 0; list-style-type:none;}
-li {padding: 0; left:0; }
+    <section id="form" class="col-">
+      <form>
+<label>Username:</label><input id="username" type="text">
+<label>Password:</label><input class="bg-grey" type="password">
+<label>Warna:</label><input class="bg-grey" type="color">
+<label>Dropdown:</label>
+        <select>
+          <option>1</option>
+          <option>2</option>
+        </select>
+<input type="submit" value="cancel">
+        <button> login</button>
+      </form>
+    </section>
 
-table {border-collapse:collapse; border-spacing:0; width:100%; color: #000;}
-table th, table td { border:none; text-align:left; padding:8px; }
-table tr { background:#f8f8f8; }
-table tr:nth-child(even){ background:#fff;}
-table th { height:37px; }
+    <section id="paragraf" class="col-">
+<p>
+<h1> Pertemuan 2</h1>  
+<h2> HTML dasar </h2>
+pertemuan 2, dasar HTML membuat paragraf <br/> sederhana dengan huruf <i>miring </i>,<b>Tebal</b>
+</p>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+  </ul>
+  <ol>
+    <li>satu</li>
+    <li>dua</li>
+  </ol>
+</section>
+<section id="table" class="col-">
+<h2>table</h2>
+<table border="1">
+<thead>
+  <tr><th>jan </th><th>feb </th></tr>
+</thead>  
+<tbody>
+<tr><td>1 </td><td>2 </td></tr>
+<tr><td>3 </td><td>4 </td></tr>
+</tbody>
+</table>
+</section>
+
+        
+<footer>@2025</footer>    
+  </body>
+</html>
